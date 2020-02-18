@@ -30,7 +30,7 @@ class BookController
             $category = $_POST['category_id'];
             $book = new Book($name, $description, $category);
             $this->bookDB->create($book);
-            var_dump($book);
+//            var_dump($book);
             $message = 'Book created';
             include 'view/book/add.php';
         }
@@ -66,6 +66,12 @@ class BookController
             $this->bookDB->update($id, $book);
             header('Location: book.php');
         }
+    }
+
+    public function search(){
+        $nameSearch = $_GET['nameSearch'];
+        $books = $this->bookDB->searchByName($nameSearch);
+        include 'view/book/list.php';
     }
 
 }

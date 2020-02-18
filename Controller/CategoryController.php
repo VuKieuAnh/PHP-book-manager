@@ -43,7 +43,7 @@ class CategoryController
         } else {
             $id = $_POST['id'];
             $this->categoryDB->delete($id);
-            header('Location: index.php');
+            header('Location: category.php');
         }
     }
     public function edit()
@@ -56,7 +56,7 @@ class CategoryController
             $id = $_POST['id'];
             $category = new Category($_POST['name']);
             $this->categoryDB->update($id, $category);
-            header('Location: index.php');
+            header('Location: category.php');
         }
     }
 

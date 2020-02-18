@@ -17,7 +17,7 @@ if(isset($message)){
                 </div>
                 <div class="form-group">
                     <label>Mô tả</label>
-                    <input type="text" class="form-control" name="description"  placeholder="Nhập tên" required>
+                    <textarea type="text" class="form-control" name="description"  placeholder="Nhập mô tả" required></textarea>
                 </div>
                 <div class="form-group">
                     <label>Danh mục</label>

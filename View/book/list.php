@@ -1,5 +1,20 @@
-<h2>Danh sách danh mục</h2>
-<a href="./book.php?page=add">Thêm mới</a>
+<h2>Danh sách sách</h2>
+<div style="padding-top: 20px">
+    <a href="./book.php?page=add">
+        <button type="button" class="btn btn-info"> Thêm mới</button>
+    </a>
+    <div style="float: right">
+        <form class="form-inline" method="get">
+            <input hidden name="page" value="search"/>
+            <div class="form-group mx-sm-3 mb-2">
+                <input type="text" name="nameSearch" class="form-control" placeholder="Nhập tên">
+            </div>
+            <button class="btn btn-primary mb-2" type="submit" value="search">Tìm kiếm
+            </button>
+        </form>
+    </div>
+</div>
+
 <table class="table">
     <thead>
     <tr>

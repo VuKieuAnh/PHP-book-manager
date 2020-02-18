@@ -1,5 +1,5 @@
 <h2>Cập nhật danh mục</h2>
-<form method="post" action="./index.php?page=edit">
+<form method="post" action="./category.php?page=edit">
     <input type="hidden" name="id" value="<?php echo $category->id; ?>"/>
     <div class="form-group">
         <label>Name</label>

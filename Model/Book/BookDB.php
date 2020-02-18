@@ -63,4 +63,22 @@ class BookDB
         $statement->bindParam(4, $id);
         return $statement->execute();
     }
+
+    public function searchByName($name){
+        $sql = "select books.id, books.name, books.description, books.category_id, categories.name as category_name from books INNER JOIN categories
+ON books.category_id = categories.id where instr(books.name, ?)> 0";
+        $stm = $this->connection->prepare($sql);
+        $stm->bindParam(1, $name);
+        $stm->execute();
+        $result = $stm->fetchAll();
+        $books = [];
+        foreach ($result as $row) {
+            $book = new Book($row['name'], $row['description'], $row['category_id']);
+            $book->id = $row['id'];
+            $book->category_name = $row['category_name'];
+            $books[] = $book;
+        }
+        return $books;
+
+    }
 }
