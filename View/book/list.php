@@ -31,7 +31,7 @@
         <td><?php echo ++$key ?></td>
         <td><?php echo $book->name ?></td>
         <td><?php echo $book->category_name ?></td>
-        <td> <a href="./book.php?page=delete&id=<?php echo $book->id; ?>" class="btn btn-warning btn-sm">Delete</a></td>
+        <td> <a href="./book.php?page=delete&id=<?php echo $book->id; ?>" class="btn btn-danger">Delete</a></td>
         <td> <a href="./book.php?page=edit&id=<?php echo $book->id; ?>" class="btn btn-sm">Update</a></td>
         <?php endforeach; ?>
     </tbody>

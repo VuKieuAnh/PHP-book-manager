@@ -7,7 +7,7 @@
     </div>
     <div class="form-group">
         <label>Mô tả</label>
-        <textarea type="text" name="description" value="<?php echo $book->description; ?>" class="form-control"/></textarea>
+        <textarea type="text" name="description" value="" class="form-control"/><?php echo $book->description; ?></textarea>
     </div>
     <div class="form-group">
         <label>Danh mục</label>
